@@ -24,6 +24,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav id="nav">
+      <%= yield :nav %>
+    </nav>
+
+    <main id="main-content">
+      <%= yield %>
+
+      <footer id="footer">
+        <%= yield :footer %>
+      </footer>
+    </main>
+
+    <aside id="sidebar">
+      <%= yield :sidebar %>
+    </aside>
   </body>
 </html>

@@ -1,0 +1,8 @@
+el-menu {
+    margin: 0;
+
+    &[open] {
+        display: flex;
+        flex-direction: column;
+    }
+}
