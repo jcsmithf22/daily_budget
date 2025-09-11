@@ -29,7 +29,7 @@ body {
     }
 }
 
-:where(button, input, textarea, summary, .input, .btn) {
+:where(button, input, textarea, summary, .input, .btn, el-option) {
     --outline-size: min(0.2em, 2px);
 
     appearance: none;
@@ -54,6 +54,7 @@ body {
         outline-width: var(--outline-size);
         outline-color: var(--outline-color, var(--color-link));
         outline-offset: var(--outline-offset, calc(var(--outline-size) * 2));
+        outline-style: solid;
     }
 
     /* Pressing */
