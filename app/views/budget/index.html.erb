@@ -1,0 +1,57 @@
+<div>
+  this is the budget index page
+</div>
+
+<div class="margin-inline-double">
+  <el-dropdown>
+    <button type="button" class="btn">Options</button>
+    <el-menu anchor="bottom start" popover>
+      <button class="btn btn--plain" type="button">Edit</button>
+      <button class="btn btn--plain" type="button">Duplicate</button>
+      <button class="btn btn--plain" type="button">Archive</button>
+      <button class="btn btn--negative btn--thin" type="button">Delete</button>
+    </el-menu>
+  </el-dropdown>
+</div>
+
+<div class="panel">
+  <el-select name="status" value="active">
+    <button type="button" class="input">
+      <el-selectedcontent>Active</el-selectedcontent>
+    </button>
+    <el-options popover anchor="bottom start">
+      <el-option value="active">Active</el-option>
+      <el-option value="inactive">Inactive</el-option>
+      <el-option value="archived">Archived</el-option>
+    </el-options>
+  </el-select>
+</div>
+
+<div class="panel">
+  <el-autocomplete>
+    <input name="user" class="input" placeholder="Search...">
+    <button type="button">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+        />
+      </svg>
+    </button>
+
+    <el-options popover anchor="bottom start">
+      <el-option value="Wade Cooper">Wade Cooper</el-option>
+      <el-option value="Tom Cooper">Tom Cooper</el-option>
+      <el-option value="Jane doe">Jane Doe</el-option>
+      <el-option value="Samuel Smith">Samuel Smith</el-option>
+      <el-option value="George Winston">George Winston</el-option>
+    </el-options>
+  </el-autocomplete>
+</div>

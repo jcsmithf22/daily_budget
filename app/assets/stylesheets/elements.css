@@ -73,6 +73,10 @@ el-options {
     color: var(--color-text);
     --outline-offset: 0;
   }
+
+  &:focus-visible {
+      outline: none;
+  }
 }
 
 button.input {
