@@ -1,6 +1,7 @@
 el-menu {
   margin: 0;
-  margin-block-start: var(--inline-space-half);
+  --anchor-gap: var(--inline-space-half);
+  /* margin-block-start: var(--inline-space-half); */
   --menu-width: 50ch;
   --menu-padding: var(--block-space-half);
 
@@ -34,7 +35,7 @@ el-menu {
 
 el-options {
   margin: 0;
-  margin-block-start: var(--inline-space-half);
+  --anchor-gap: var(--inline-space-half);
   --menu-width: 50ch;
   --menu-padding: var(--block-space-half);
 
@@ -66,18 +67,47 @@ el-options {
   }
 
   & el-option {
-    /* background-color: var(--color-bg); */
     padding: var(--menu-padding);
-    /* --hover-size: 0; */
-    /* --hover-filter: brightness(0.9); */
     cursor: default;
     border-radius: 0.5em;
     color: var(--color-text);
-
     --outline-offset: 0;
   }
 }
 
 button.input {
   text-align: start;
+}
+
+el-autocomplete {
+  position: relative;
+  display: block;
+
+  el-options {
+    inline-size: var(--input-width);
+
+    [aria-selected="true"]:not(:hover) {
+      outline-width: var(--outline-size);
+      outline-color: var(--outline-color, var(--color-link));
+      outline-offset: var(--outline-offset, calc(var(--outline-size) * 2));
+      outline-style: solid;
+    }
+  }
+
+  button {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    --hover-size: 0;
+    display: flex;
+    align-items: center;
+    inset-block: 0;
+    inset-inline-end: 0;
+    padding-inline: var(--block-space-half);
+
+    svg {
+      inline-size: var(--block-space);
+      block-size: var(--block-space);
+    }
+  }
 }
